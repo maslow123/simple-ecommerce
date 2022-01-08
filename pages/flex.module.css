@@ -1,0 +1,19 @@
+.parent {
+    display: flex;
+    flex-direction: row;
+    height: 1500px;
+    justify-content: center; /* jarak antar kontentnya*/
+    align-items: center ; /* tata letak seluruh item yang ada di dalam parent */
+}
+
+.child {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin: 1px;
+}
+
+.child:first-child {
+    flex-basis: 40%;
+}
+
