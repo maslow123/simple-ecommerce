@@ -65,4 +65,3 @@ export default function Home({
   }
   
   Home.Layout = Layout;
-  // 004 Ui provider Interfaces
