@@ -65,4 +65,3 @@ export default function Home({
   }
   
   Home.Layout = Layout;
-  // 21 Slider - 003 Product Slider Done
