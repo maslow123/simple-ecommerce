@@ -1,10 +1,9 @@
 export type ApiFetcherOptions = {
-    url: string;
     query: string;
     variables?: Variables;
 };
 
-export type Variables = { [key: string]: string };
+export type Variables = { [key: string]: string | any | undefined };
 
 export type ApiFetcherResults<T> = {
     data: T;
@@ -20,8 +19,7 @@ export interface ApiProviderContext {
 };
 
 export interface ApiConfig {
-    apiUrl: string;
-    fetch: ApiFetcher;
+    fetch<T>(options: ApiFetcherOptions): Promise<ApiFetcherResults<T>>;
 };
 
 export interface ApiHooks {

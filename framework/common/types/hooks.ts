@@ -1,4 +1,4 @@
-import { ApiFetcher } from "./api";
+import { ApiFetcher, ApiFetcherOptions } from "./api";
 
 export type MutationHookContext = {
     fetch: (input: any) => any
@@ -6,10 +6,12 @@ export type MutationHookContext = {
 
 export type FetcherHookContext = {
     input: any;
-    fetch: ApiFetcher
+    fetch: ApiFetcher;
+    options: ApiFetcherOptions;
 };
 
 export type MutationHook = {
+    fetcherOptions: ApiFetcherOptions,
     fetcher: (context: FetcherHookContext) => any,
     useHook(
         context: MutationHookContext

@@ -13,8 +13,7 @@ type ReturnType = {
 };
 
 const getAllProducts = async (config: ApiConfig): Promise<Product[]> => {
-    const { data } = await fetchApi<ReturnType>({ 
-        url: config.apiUrl,
+    const { data } = await config.fetch<ReturnType>({ 
         query: getAllProductsQuery 
     });
 
